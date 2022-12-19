@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		title Страница
+		link(rel="stylesheet", href="css/base.css")
+		block styles
+		block variables
+	body
+		div.main
+			- 
+				let menu_items = [
+					{
+						text: "CSS",
+						active: false,
+						link: "index.html"
+					},{
+						text: "Синтаксис CSS",
+						active: false,
+						link: "syntax.html"
+					},{
+						text: "Вставка CSS",
+						active: false,
+						link: "#"
+					},{
+						text: "CSS текст",
+						active: false,
+						link: "#"
+					},{
+						text: "CSS шрифт",
+						active: false,
+						link: "fonts.html"
+					},{
+						text: "Блоки",
+						active: false,
+						link: "#"
+					}
+				];
+				menu_items[active_index].active = true;
+			
+			div.menu
+				each menu_item in menu_items
+					if menu_item.active
+						a.menu_item.menu_item__active(href=menu_item.link) #{menu_item.text}
+					else 
+						a.menu_item(href=menu_item.link) #{menu_item.text}
+
+			div.content
+				block content

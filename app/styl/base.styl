@@ -1,0 +1,42 @@
+body 
+	background-color #164B69
+	font 14px arial
+	margin 0
+
+
+menu_item_color = #DCDCDC
+.menu_item
+	text-decoration none
+	padding 5px
+
+	&__active
+		background-color: menu_item_color;
+	
+	&:hover
+		background-color: menu_item_color;
+
+.menu
+	display flex
+	justify-content space-evenly
+	font-weight bold
+	flex-wrap wrap
+
+p
+	text-indent 3em
+	text-align justify
+	line-height 2em
+	letter-spacing 1px
+
+.main 
+	min-height 700px
+	width 60%
+	padding 10px
+	background-color #E3E3E3
+	margin auto
+
+@media (max-width 600px)
+	.main
+		min-width 0
+		width 100%
+
+

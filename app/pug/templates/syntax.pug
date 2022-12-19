@@ -1,0 +1,24 @@
+extends ../base.pug
+
+block variables
+	- let active_index = 1;
+
+block styles
+	link(rel="stylesheet", href="css/syntax.css")
+
+block content
+	- 
+		let upper_imgs = ["img/syntax.JPG", "img/html.jpg"]
+		let lower_imgs = ["img/css1.jpg", "img/css2.jpg", "img/html.jpg"]
+
+	div.upper-imgs
+		each img in upper_imgs
+			div.upper-img
+				img(src=img)
+
+	p Основная задача Каскадных Стилей — это рассказать движку браузера, как отрисовать элементы страницы — каким цветом, как позиционировать их на странице, как украшать, и так далее. Синтаксис CSS построен следуя этой идее, и состоит из следующих основных блоков: свойство и значение
+
+	div.lower-imgs
+		each img in lower_imgs
+			div.lower-img
+				img(src=img)
